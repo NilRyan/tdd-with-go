@@ -8,3 +8,17 @@ func Sum(numbers []int) int {
 	}
 	return sum
 }
+
+func SumAll(arrNumbers ...[]int) []int {
+	sums := []int{}
+	for _, numbers := range arrNumbers {
+		sum := 0
+		for _, number := range numbers {
+			sum += number
+		}
+
+		sums = append(sums, sum)
+	}
+	return sums
+
+}

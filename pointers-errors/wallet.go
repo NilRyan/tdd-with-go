@@ -1,13 +1,13 @@
 package pointerserrors
 
 type Wallet struct {
-	bal int
+	balance int
 }
 
 func (w *Wallet) Deposit(amount int) {
-	w.bal += amount
+	w.balance += amount
 }
 
 func (w Wallet) Balance() int {
-	return w.bal
+	return w.balance
 }

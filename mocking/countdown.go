@@ -39,6 +39,9 @@ type SpyTime struct {
 func (s *SpyTime) Sleep(duration time.Duration) {
 	s.durationSlept = duration
 }
+func (c *ConfigurableSleeper) Sleep() {
+	c.sleep(c.duration)
+}
 
 func main() {
 	sleeper := &DefaultSleeper{}
